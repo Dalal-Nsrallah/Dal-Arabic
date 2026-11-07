@@ -32,7 +32,7 @@ pip install pillow   # with libraqm
 python tools/make_font.py Arabic.ttf Latin.ttf 22 DalMyFont22 src/fonts/DalMyFont22.h Regular
 ```
 
-## Status (0.1.5)
+## Status (0.1.6)
 
 Done: shaping, lam-alef, harakat, bidi for Arabic with numbers and Latin (paired brackets, percent sign, Arabic-Indic digits), wrapping, justification by spaces.
 
@@ -40,6 +40,7 @@ Tested against HarfBuzz (joining forms) and FriBidi (visual order), and on the 5
 
 ## Changes
 
+- 0.1.6: Arabic section in this README (install, usage, what's new).
 - 0.1.5: paired brackets follow the Unicode rule (book(s) inside Arabic), % sits on the left of a number in Arabic text (%15), Arabic-Indic digits stay Arabic numbers.
 - 0.1.4: first release.
 
