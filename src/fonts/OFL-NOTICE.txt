@@ -1,0 +1,2 @@
+The bitmap fonts in this folder are generated from Noto Sans Arabic and Noto Sans
+(Copyright The Noto Project Authors), licensed under the SIL Open Font License 1.1.
