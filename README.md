@@ -42,12 +42,36 @@ Tested against HarfBuzz (joining forms) and FriBidi (visual order), and on the 5
 
 - 0.1.5: paired brackets follow the Unicode rule (book(s) inside Arabic), % sits on the left of a number in Arabic text (%15), Arabic-Indic digits stay Arabic numbers.
 - 0.1.4: first release.
-Planned: kashida justification, better harakat placement on tall letters, more fonts.
+
+## Planned
+
+Kashida justification, better harakat placement on tall letters, more fonts.
 
 ---
 
 ## بالعربية
 
 مكتبة **دال** تكتب العربية صحيحة على شاشات المتحكمات الصغيرة: حروف متصلة بأشكالها الأربعة، ولام ألف، والحركات، والكتابة من اليمين إلى اليسار مع بقاء الأرقام والكلمات اللاتينية في اتجاهها، وتقسيم الأسطر والمحاذاة. الخطوط تُولَّد من خطوط عربية حقيقية بحواف ناعمة.
+
+### التثبيت
+
+في Arduino IDE: نافذة **Library Manager**، ثم البحث عن **Dal**، ثم **Install**. والمثال **DalDemo** في قائمة **File ← Examples ← Dal**.
+
+### الاستعمال
+
+```cpp
+#include <Dal.h>
+#include <fonts/DalNoto22.h>
+
+DalText dal(&DalNoto22);   // متغير عام
+
+dalDraw(&tft, dal, "مرحبًا بالعالم", 10, 10, 300, DAL_RIGHT, 0xFFFFFF, 0x000000);
+```
+
+### الجديد في 0.1.5
+
+- الأقواس حول كلمة لاتينية داخل جملة عربية تبقى في مكانها: book(s)
+- علامة النسبة تُكتب على يسار الرقم في النص العربي: %15
+- الأرقام الهندية (٠١٢٣) تبقى أرقامًا عربية حتى بعد كلمة لاتينية
 
 المؤلفة: دلال نصرالله · الرخصة: MIT
